@@ -1,4 +1,6 @@
-# spring-boot-2-microservices
+# Spring Boot 2 Microservices
+
+:raised_hands: Hands-On Microservices with Spring Boot and Spring Cloud
 
 ## Prerequisites
 
@@ -8,11 +10,11 @@
 - jq: <https://stedolan.github.io/jq/download/>.
 - Spring Boot CLI: <https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-installing-the-cli>.
 
-## Getting Started
+## Use the Spring CLI to generate skeleton code
 
-- Use the Spring Boot CLI to generate the services
+Use the Spring Boot CLI to generate skeleton code.
 
-```bash
+``` bash
 spring init \
 --boot-version=2.4.3 \
 --build=gradle \
@@ -26,9 +28,15 @@ spring init \
 product-service
 ```
 
-- Then compile to validate everything works as expected
+Generate the services using [create-projects.sh](create-projects.sh)
 
-```bash
+``` bash
+./create-projects.sh
+```
+
+Then compile to validate everything works as expected.
+
+``` bash
 cd microservices/product-composite-service; ./gradlew build; cd -; \
 cd microservices/product-service;           ./gradlew build; cd -; \
 cd microservices/recommendation-service;    ./gradlew build; cd -; \
@@ -38,3 +46,4 @@ cd microservices/review-service;            ./gradlew build; cd -;
 ## References
 
 - [Hands-On Microservices with Spring Boot and Spring Cloud](https://www.packtpub.com/product/hands-on-microservices-with-spring-boot-and-spring-cloud/9781789613476)
+- [github.com/PacktPublishing/Hands-On-Microservices-with-Spring-Boot-and-Spring-Cloud](https://github.com/PacktPublishing/Hands-On-Microservices-with-Spring-Boot-and-Spring-Cloud)
