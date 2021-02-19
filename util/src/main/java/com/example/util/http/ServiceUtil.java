@@ -28,6 +28,7 @@ public class ServiceUtil {
         if (serviceAddress == null) {
             serviceAddress = findMyHostname() + "/" + findMyIpAddress() + ":" + port;
         }
+		LOG.debug("getServiceAddress: {}", serviceAddress);
         return serviceAddress;
     }
 
