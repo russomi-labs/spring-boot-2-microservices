@@ -53,9 +53,8 @@ For convenience, you can also use the multi-project build in the root of the rep
 
 The api and util projects will be packaged as a library without a `main` application class.
 
-The Gradle `org.springframework.boot` and `io.spring.dependency-management`
-
-plugins are replaced with a `dependencyManagement` section:
+The Gradle `org.springframework.boot` and `io.spring.dependency-management` plugins are replaced
+with a `dependencyManagement` section:
 
 ``` groovy
 plugins {
