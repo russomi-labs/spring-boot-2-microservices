@@ -51,7 +51,8 @@ For convenience, you can also use the multi-project build in the root of the rep
 
 ## Creeate the api and util library projects
 
-The api and util projects will be packaged as a library without a `main` application class.
+The `api` and `util` projects will be packaged as a library without a `main` application class. They contain
+code that is shared by the microservice projects.
 
 The Gradle `org.springframework.boot` and `io.spring.dependency-management` plugins are replaced
 with a `dependencyManagement` section:
