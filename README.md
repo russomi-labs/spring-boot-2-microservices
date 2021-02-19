@@ -28,7 +28,7 @@ spring init \
 product-service
 ```
 
-Generate the services using [create-projects.sh](create-projects.sh)
+Generate the services using [create-projects.sh](create-projects.sh):
 
 ``` bash
 ./create-projects.sh
