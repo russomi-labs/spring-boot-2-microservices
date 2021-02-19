@@ -43,6 +43,47 @@ cd microservices/recommendation-service;    ./gradlew build; cd -; \
 cd microservices/review-service;            ./gradlew build; cd -;
 ```
 
+For convenience, you can also use the multi-project build in the root of the repo:
+
+``` bash
+./gradlew build
+```
+
+## Creeate the api and util library projects
+
+The api and util projects will be packaged as a library without a `main` application class.
+
+The Gradle `org.springframework.boot` and `io.spring.dependency-management`
+
+plugins are replaced with a `dependencyManagement` section:
+
+``` groovy
+plugins {
+   id "io.spring.dependency-management" version "1.0.5.RELEASE"
+}
+
+dependencyManagement {
+  imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+}
+```
+
+Update the root `settings.gradle` to include the `util` and `api` projects:
+
+``` groovy
+include ':api'
+include ':util'
+include ':microservices:product-service'
+include ':microservices:review-service'
+include ':microservices:recommendation-service'
+include ':microservices:product-composite-service'
+```
+
+Validate the build is successful:
+
+``` bash
+./gradlew build
+```
+
 ## References
 
 - [Hands-On Microservices with Spring Boot and Spring Cloud](https://www.packtpub.com/product/hands-on-microservices-with-spring-boot-and-spring-cloud/9781789613476)
