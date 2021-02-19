@@ -3,8 +3,10 @@
 mkdir microservices
 cd microservices
 
+BOOT_VERSION=2.4.3
+
 spring init \
---boot-version=2.4.3 \
+--boot-version=$BOOT_VERSION \
 --build=gradle \
 --java-version=1.8 \
 --packaging=jar \
@@ -16,7 +18,7 @@ spring init \
 product-service
 
 spring init \
---boot-version=2.4.3 \
+--boot-version=$BOOT_VERSION \
 --build=gradle \
 --java-version=1.8 \
 --packaging=jar \
@@ -28,7 +30,7 @@ spring init \
 review-service
 
 spring init \
---boot-version=2.4.3 \
+--boot-version=$BOOT_VERSION \
 --build=gradle \
 --java-version=1.8 \
 --packaging=jar \
@@ -40,7 +42,7 @@ spring init \
 recommendation-service
 
 spring init \
---boot-version=2.4.3 \
+--boot-version=$BOOT_VERSION \
 --build=gradle \
 --java-version=1.8 \
 --packaging=jar \
