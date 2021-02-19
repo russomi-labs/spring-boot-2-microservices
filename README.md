@@ -10,7 +10,7 @@
 - jq: <https://stedolan.github.io/jq/download/>.
 - Spring Boot CLI: <https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-installing-the-cli>.
 
-## Generate the services
+## Create the microservice projects
 
 Use the Spring Boot CLI to generate skeleton code.
 
